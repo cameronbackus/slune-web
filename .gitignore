@@ -1,0 +1,5 @@
+# Downloaded original sources (tools/fetch_original.sh)
+original/
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,184 @@
+{
+ "levels": [
+  {
+   "name": "level-airport-race-1",
+   "world": "world-airport",
+   "flags": 39,
+   "laps": 2
+  },
+  {
+   "name": "level-at-the-mountain-night-race-1",
+   "world": "world-at_the_mountain-night",
+   "flags": 27,
+   "laps": 2
+  },
+  {
+   "name": "level-at-the-mountain-race-1",
+   "world": "world-at_the_mountain",
+   "flags": 27,
+   "laps": 2
+  },
+  {
+   "name": "level-canion-race-1",
+   "world": "world-canion",
+   "flags": 26,
+   "laps": 2
+  },
+  {
+   "name": "level-canion-race-2",
+   "world": "world-canion",
+   "flags": 33,
+   "laps": 2
+  },
+  {
+   "name": "level-chapakalake-race-1",
+   "world": "world-chapakalake",
+   "flags": 27,
+   "laps": 2
+  },
+  {
+   "name": "level-crashfunkel-race-1",
+   "world": "world-crashfunkel",
+   "flags": 19,
+   "laps": 2
+  },
+  {
+   "name": "level-crashfunkel-race-2",
+   "world": "world-crashfunkel",
+   "flags": 10,
+   "laps": 3
+  },
+  {
+   "name": "level-cyberbombay-race-1",
+   "world": "world-cyberbombay",
+   "flags": 21,
+   "laps": 2
+  },
+  {
+   "name": "level-deserticsorry-race-1",
+   "world": "world-desertic-sorry",
+   "flags": 17,
+   "laps": 2
+  },
+  {
+   "name": "level-indusmeeting-race-1",
+   "world": "world-indusmeeting",
+   "flags": 33,
+   "laps": 2
+  },
+  {
+   "name": "level-raceinde-race-1",
+   "world": "world-racinde",
+   "flags": 20,
+   "laps": 2
+  },
+  {
+   "name": "level-raceinde-race-2",
+   "world": "world-racinde",
+   "flags": 20,
+   "laps": 2
+  },
+  {
+   "name": "level-urbancall-race-1",
+   "world": "world-urbancall",
+   "flags": 11,
+   "laps": 2
+  }
+ ],
+ "missions": [
+  {
+   "name": "level-mission-1",
+   "world": "world-crashfunkel"
+  },
+  {
+   "name": "level-mission-2",
+   "world": "world-crashfunkel"
+  },
+  {
+   "name": "level-mission-3",
+   "world": "world-crashfunkel"
+  },
+  {
+   "name": "level-mission-4",
+   "world": "world-at_the_mountain"
+  },
+  {
+   "name": "level-mission-5",
+   "world": "world-at_the_mountain-night"
+  },
+  {
+   "name": "level-mission-6",
+   "world": "world-crashfunkel-night"
+  },
+  {
+   "name": "level-mission-7",
+   "world": "world-indusmeeting"
+  },
+  {
+   "name": "level-mission-8",
+   "world": "world-cyberbombay"
+  },
+  {
+   "name": "level-mission-9",
+   "world": "world-booling"
+  },
+  {
+   "name": "level-mission-10",
+   "world": "world-urbancall"
+  },
+  {
+   "name": "level-mission-11",
+   "world": "world-airport"
+  },
+  {
+   "name": "level-mission-12",
+   "world": null
+  },
+  {
+   "name": "level-mission-13",
+   "world": "world-desertic-sorry"
+  },
+  {
+   "name": "level-mission-14",
+   "world": "world-chapakalake"
+  },
+  {
+   "name": "level-mission-15",
+   "world": "world-ridepark"
+  }
+ ],
+ "extras": [
+  {
+   "name": "level-bowling-1",
+   "world": "world-booling"
+  },
+  {
+   "name": "level-bowling-2",
+   "world": "world-booling"
+  },
+  {
+   "name": "level-bowling-3",
+   "world": "world-booling"
+  },
+  {
+   "name": "level-crashfunkel-duel",
+   "world": "world-crashfunkel"
+  },
+  {
+   "name": "level-cyberbombay-arena-1",
+   "world": "world-cyberbombay"
+  },
+  {
+   "name": "level-urbancall-arena-1",
+   "world": "world-urbancall"
+  },
+  {
+   "name": "level-indusmeeting-shoot-1",
+   "world": "world-indusmeeting"
+  },
+  {
+   "name": "level-ridepark-clock-1",
+   "world": "world-ridepark"
+  }
+ ]
+}

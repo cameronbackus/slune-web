@@ -1,0 +1,55 @@
+:root {
+  --bg: #120a24;
+  --panel: rgba(20, 12, 40, 0.92);
+  --ink: #f4ecff;
+  --muted: #b6a7d6;
+  --accent: #ffd23f;
+  --accent-ink: #2a1600;
+  --line: rgba(255, 255, 255, 0.14);
+  --sel: #7a4cff;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); color: var(--ink);
+  font: 15px/1.4 "Trebuchet MS", "Segoe UI", system-ui, sans-serif; }
+canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+#hud { pointer-events: none; }
+.overlay { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; padding: 16px;
+  background: radial-gradient(ellipse at center, rgba(40, 10, 80, 0.55), rgba(5, 0, 15, 0.85)); overflow-y: auto; }
+.overlay.hidden { display: none; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; width: min(920px, 100%);
+  max-height: calc(100vh - 32px); overflow-y: auto; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
+.panel.small { width: min(420px, 100%); text-align: center; }
+h1 { margin: 0; font-size: 44px; letter-spacing: 6px; color: var(--accent); text-shadow: 3px 3px 0 #b3134f; }
+h2 { margin: 16px 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--muted); }
+.tag { margin: 6px 0 4px; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+.grid button { text-align: left; padding: 10px 12px; }
+.grid button small { display: block; color: var(--muted); font-size: 12px; }
+.row { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+.seg { display: flex; flex-wrap: wrap; gap: 6px; }
+button { font: inherit; color: var(--ink); background: rgba(255, 255, 255, 0.07); border: 1px solid var(--line); border-radius: 8px;
+  padding: 7px 12px; cursor: pointer; }
+button:hover { background: rgba(255, 255, 255, 0.14); }
+button.on { background: var(--sel); border-color: #b39bff; }
+button.go { background: var(--accent); color: var(--accent-ink); font-weight: bold; font-size: 18px; padding: 10px 30px; margin-top: 18px; border: 0; }
+button.go:hover { filter: brightness(1.1); }
+.panel.small button { display: block; width: 100%; margin-top: 10px; }
+.help { margin-top: 16px; color: var(--muted); }
+.help summary { cursor: pointer; color: var(--ink); }
+.bar { height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden; }
+#loadbar { height: 100%; width: 0; background: var(--accent); transition: width 0.15s; }
+#ranking { text-align: left; font-size: 17px; }
+#ranking li { margin: 4px 0; }
+#ranking .you { color: var(--accent); font-weight: bold; }
+#messages { position: fixed; left: 16px; top: 12px; right: 260px; font-size: 20px; font-weight: bold; pointer-events: none;
+  text-shadow: 2px 2px 0 #000, -1px -1px 0 #000; white-space: pre-line; }
+.seg button img { width: 22px; height: 22px; vertical-align: middle; margin-right: 4px; image-rendering: auto; }
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  #messages { right: 16px; font-size: 16px; top: 220px; }
+}
+.hidden { display: none !important; }
+.tabs { margin-top: 14px; }
+.tabs button { font-size: 16px; padding: 8px 18px; }
+.grid button:disabled { opacity: 0.4; cursor: not-allowed; }
+body.wide-msg #messages { right: 60px; }

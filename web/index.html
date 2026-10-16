@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slune</title>
+<link rel="icon" href="assets/textures/head_tux_1.png">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three-mesh-bvh": "https://cdn.jsdelivr.net/npm/three-mesh-bvh@0.7.3/build/index.module.js"
+} }
+</script>
+</head>
+<body>
+<canvas id="view"></canvas>
+<canvas id="hud"></canvas>
+
+<div id="messages"></div>
+
+<div id="menu" class="overlay">
+  <div class="panel">
+    <h1>S L U N E</h1>
+    <p class="tag">A 2003 Linux racing / car-crashing game by Jean-Baptiste "Jiba" Lamy, rebuilt for the browser from its original data files.</p>
+
+    <div id="modes" class="seg tabs"></div>
+
+    <div id="campaign">
+      <h2>Missions</h2>
+      <div id="missions" class="grid"></div>
+    </div>
+
+    <div id="racing" class="hidden">
+      <div id="tracksbox">
+        <h2>Track</h2>
+        <div id="levels" class="grid"></div>
+      </div>
+      <div id="extrasbox" class="hidden">
+        <h2>Mode</h2>
+        <div id="extras" class="grid"></div>
+      </div>
+      <div class="row">
+        <div>
+          <h2>Character</h2>
+          <div id="chars" class="seg"></div>
+        </div>
+        <div>
+          <h2>Vehicle</h2>
+          <div id="vehicles" class="seg"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <h2 id="lapslabel">Laps</h2>
+          <div id="laps" class="seg"></div>
+        </div>
+        <div>
+          <h2>Opponents</h2>
+          <div id="opponents" class="seg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <h2>Difficulty</h2>
+        <div id="difficulty" class="seg"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <h2>View distance</h2>
+        <div id="vision" class="seg"></div>
+      </div>
+      <div>
+        <h2>Sound</h2>
+        <div id="sound" class="seg"></div>
+      </div>
+    </div>
+
+    <button id="go" class="go">Race</button>
+
+    <details class="help">
+      <summary>Controls</summary>
+      <p><b>Mouse</b>, as in the original: the pointer steers. Left/right sets direction; higher on screen goes faster, lower slows down. Keep the pointer at the bottom edge to start reversing.
+        Left button: jump (pitch up while airborne). Right button: nitro / flame-thrower. Middle button: wall climb.</p>
+      <p><b>Keyboard</b>: arrows or WASD steer and throttle. Space: jump (pitch up while airborne). Shift: wall climb (pitch down while airborne). X or Alt: nitro / flame-thrower. Esc: pause.</p>
+      <p>Races: drive through the yellow flags in order. Nitro uses life, so watch the orange bar. Crashing into walls hurts, and falling off the world kills you.</p>
+      <p>Campaign: follow the story of Tux smuggling medicine to Africa. During cut-scenes, click or press a key to continue.</p>
+      <p>Other modes: bowling (push the ball into the pins), a duel, two deathmatch arenas (whoever pushed you last gets the frag), a trunk-throwing level and a time trial.</p>
+    </details>
+  </div>
+</div>
+
+<div id="loading" class="overlay hidden"><div class="panel small"><h2 id="loadmsg">Loading…</h2><div class="bar"><div id="loadbar"></div></div></div></div>
+
+<div id="pause" class="overlay hidden">
+  <div class="panel small">
+    <h2>Paused</h2>
+    <button id="resume" class="go">Resume</button>
+    <button id="restart">Restart race</button>
+    <button id="quit">Back to menu</button>
+  </div>
+</div>
+
+<div id="results" class="overlay hidden">
+  <div class="panel small">
+    <h2 id="restitle">Race over</h2>
+    <ol id="ranking"></ol>
+    <button id="again" class="go">Race again</button>
+    <button id="menu2">Back to menu</button>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
